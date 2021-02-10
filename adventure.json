@@ -1,0 +1,164 @@
+{
+  "__metadata__": {
+    "title": "Adventure",
+    "start": "kitchen"
+  },
+  "kitchen": {
+    "name": "kitchen",
+    "description": "You're in a kitchen. It smells a little off...",
+    "exits": [
+      {
+        "destination": "hallway",
+        "description": "A door leads into the hall."
+      },
+      {
+        "destination": "locked_door",
+        "description": "You turn around and see that the door is wide open...",
+        "hidden": true
+      },
+      {
+        "destination": "dishwasher",
+        "description": "There is something leaking through this doorway..."
+      }
+    ],
+    "items": [
+      "key"
+    ]
+  },
+  "locked_door": {
+    "name": "locked_door",
+    "description": "You're at another door.",
+    "exits": [
+      {
+        "destination": "kitchen",
+        "description": "Let's go back to the kitchen."
+      },
+      {
+        "destination": "outside",
+        "description": "Door with a card scanner on the wall next to it.",
+        "required_key": "ID card"
+      }
+    ],
+    "items": []
+  },
+  "hallway": {
+    "name": "hallway",
+    "description": "Hmm... where to go... ",
+    "exits": [
+      {
+        "destination": "kitchen",
+        "description": "Go back into the kitchen."
+      },
+      {
+        "destination": "staircase",
+        "description": "A door with the words STAIRS was covered by all these boxes.",
+        "required_key": "knife",
+        "hidden": true
+      },
+      {
+        "destination": "freezer",
+        "description": "Bright silver door labeled FREEZER.",
+        "required_key": "key"
+      },
+      {
+        "destination": "dishwasher",
+        "description": "There is something leaking under this door..."
+      }
+    ],
+    "items": []
+  },
+  "freezer": {
+    "name": "freezer",
+    "description": "You hope the door doesn't close ... It's really cold in there.",
+    "exits": [
+      {
+        "destination": "hallway",
+        "description": "Go back into the hallway."
+      }
+    ],
+    "items": [
+      "ice cream",
+      "ID card"
+    ]
+  },
+  "dishwasher": {
+    "name": "dishwasher",
+    "description": "This place is a mess. You hope you just stepped in water...",
+    "exits": [
+      {
+        "destination": "hallway",
+        "description": "Let's go back into the hallway."
+      },
+      {
+        "destination": "kitchen",
+        "description": "Let's go back to where we started: the kitchen."
+      }
+    ],
+    "items": [
+      "spatual",
+      "knife"
+    ]
+  },
+  "staircase": {
+    "name": "staircase",
+    "description": "Just looking at these stairs makes you out of breath.",
+    "exits": [
+      {
+        "destination": "hallway",
+        "description": "Nevermind; go back to the hallway."
+      },
+      {
+        "destination": "pickup",
+        "description": "Pick up area for food.",
+        "required_key": "ID card"
+      },
+      {
+        "destination": "market",
+        "description": "Mini market where fresh produce was sold."
+      }
+    ],
+    "items": []
+  },
+  "market": {
+    "name": "market",
+    "description": "Someone really messed up this place... There is stuff everywhere...",
+    "exits": [
+      {
+        "destination": "staircase",
+        "description": "Let's go back to that stairway."
+      },
+      {
+        "destination": "outside",
+        "description": "Oh a door. Maybe we can leave?",
+        "required_key": "ID card"
+      }
+    ],
+    "items": [
+      "cash",
+      "old food"
+    ]
+  },
+  "pickup": {
+    "name": "pickup",
+    "description": "There sure are a lot of boxes out here...",
+    "exits": [
+      {
+        "destination": "staircase",
+        "description": "Go back to the stairs"
+      },
+      {
+        "destination": "outside",
+        "description": "Oh my... is that light?! The garage for pickup is slightly cracked open...\nYou're going to find a way to make the gap wider if you want to get out... ",
+        "required_key": "spatual"
+      }
+    ],
+    "items": []
+  },
+  "outside": {
+    "name": "outside",
+    "description": "You've escaped! HEHEHE",
+    "exits": [],
+    "items": [],
+    "ends_game": true
+  }
+}
