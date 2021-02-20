@@ -1,0 +1,220 @@
+{
+  "__metadata__": {
+    "title": "Spooky Mansion",
+    "start": "entranceHall"
+  },
+  "entranceHall": {
+    "name": "entranceHall",
+    "description": "You are in the grand entrance hall of a large building.\nHow did you get here?",
+    "exits": [
+      {
+        "destination": "basement",
+        "description": "There are stairs leading down."
+      },
+      {
+        "destination": "attic",
+        "description": "There are stairs leading up."
+      },
+      {
+        "destination": "kitchen",
+        "description": "There is a red door."
+      },
+      {
+        "destination": "outside",
+        "description": "The front door.",
+        "required_key": "Mansion Key"
+      }
+    ],
+    "items": []
+  },
+  "basement": {
+    "name": "basement",
+    "description": "You have found the basement of the mansion.\nIt is darker down here.\nYou get the sense a secret is nearby, but you only see the stairs you came from.",
+    "exits": [
+      {
+        "destination": "entranceHall",
+        "description": "There are stairs leading up."
+      },
+      {
+        "destination": "secretRoom",
+        "description": "A trapdoor was hidden amongst the dust.",
+        "hidden": true
+      }
+    ],
+    "items": []
+  },
+  "attic": {
+    "name": "attic",
+    "description": "Something rustles in the rafters as you enter the attic. Creepy.\nIt's big and dark up here.",
+    "exits": [
+      {
+        "destination": "entranceHall",
+        "description": "There are stairs leading down."
+      },
+      {
+        "destination": "attic2",
+        "description": "There is an archway."
+      }
+    ],
+    "items": []
+  },
+  "attic2": {
+    "name": "attic2",
+    "description": "There's definitely a bat in here somewhere.\nThis part of the attic is brighter, so maybe you're safe here.",
+    "exits": [
+      {
+        "destination": "attic",
+        "description": "There is an archway."
+      },
+      {
+        "destination": "balcony",
+        "description": "A small door rattles in the wind."
+      },
+      {
+        "destination": "dumbwaiter",
+        "description": "There is a dumbwaiter near the chimney."
+      }
+    ],
+    "items": []
+  },
+  "balcony": {
+    "name": "balcony",
+    "description": "There's a strange light here on the balcony.",
+    "exits": [
+      {
+        "destination": "aliens",
+        "description": "Step into the light."
+      },
+      {
+        "destination": "attic2",
+        "description": "Go back inside."
+      }
+    ],
+    "items": [
+      "Mansion Key"
+    ]
+  },
+  "aliens": {
+    "name": "aliens",
+    "description": "The aliens take you aboard their spaceship.\n...\nI guess you escaped.",
+    "exits": [],
+    "items": [],
+    "ends_game": true
+  },
+  "kitchen": {
+    "name": "kitchen",
+    "description": "You've found the kitchen. You smell moldy food and some kind of animal.",
+    "exits": [
+      {
+        "destination": "entranceHall",
+        "description": "There is a red door."
+      },
+      {
+        "destination": "dumbwaiter",
+        "description": "There is a dumbwaiter."
+      }
+    ],
+    "items": []
+  },
+  "dumbwaiter": {
+    "name": "dumbwaiter",
+    "description": "You crawl into the dumbwaiter. What are you doing?",
+    "exits": [
+      {
+        "destination": "attic2",
+        "description": "Exit at the top."
+      },
+      {
+        "destination": "kitchen",
+        "description": "Exit on the first-floor."
+      },
+      {
+        "destination": "secretRoom",
+        "description": "Exit at the bottom."
+      }
+    ],
+    "items": []
+  },
+  "secretRoom": {
+    "name": "secretRoom",
+    "description": "You have found the secret room.\nWho thought a green rug was a good idea?",
+    "exits": [
+      {
+        "destination": "hallway0",
+        "description": "A long hallway leads away."
+      },
+      {
+        "destination": "basement",
+        "description": "You see a trapdoor with a spider crawling on it."
+      },
+      {
+        "destination": "dumbwaiter",
+        "description": "Get back in the dumbwaiter."
+      }
+    ],
+    "items": []
+  },
+  "crypt": {
+    "name": "crypt",
+    "description": "You've found your way into a crypt. You smell dirt.",
+    "exits": [
+      {
+        "destination": "outside",
+        "description": "There are stairs leading up."
+      }
+    ],
+    "items": []
+  },
+  "outside": {
+    "name": "outside",
+    "description": "You step out into the night.\n\nIt smells like freedom.\n",
+    "exits": [],
+    "items": [],
+    "ends_game": true
+  },
+  "hallway0": {
+    "name": "hallway0",
+    "description": "This is a very long hallway.",
+    "exits": [
+      {
+        "destination": "secretRoom",
+        "description": "Go back."
+      },
+      {
+        "destination": "hallway1",
+        "description": "Go forward."
+      }
+    ],
+    "items": []
+  },
+  "hallway1": {
+    "name": "hallway1",
+    "description": "This is a very long hallway.",
+    "exits": [
+      {
+        "destination": "hallway0",
+        "description": "Go back."
+      },
+      {
+        "destination": "hallway2",
+        "description": "Go forward."
+      }
+    ],
+    "items": []
+  },
+  "hallway2": {
+    "name": "hallway2",
+    "description": "This is a very long hallway.",
+    "exits": [
+      {
+        "destination": "hallway1",
+        "description": "Go back."
+      },
+      {
+        "destination": "crypt",
+        "description": "Go forward."
+      }
+    ],
+    "items": []
+  }
+}
